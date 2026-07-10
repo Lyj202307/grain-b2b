@@ -33,12 +33,11 @@ section{padding:5rem 2.5rem}
 .sec-title{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:300;letter-spacing:-.01em;line-height:1.2}
 
 /* ── HERO ── */
-.hero{height:75vh;min-height:500px;max-height:780px;position:relative;overflow:hidden;display:flex;align-items:flex-end;background:#1a1a1a}
-.hero-img{position:absolute;inset:0}
-.hero-img img{width:100%;height:100%;object-fit:contain;object-position:center bottom;transition:transform 12s ease-out}
-.hero-img.zoom img{transform:scale(1.03)}
-.hero-fade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,rgba(0,0,0,.25) 50%,rgba(0,0,0,.1) 100%)}
-.hero-text{position:relative;z-index:2;padding:0 3rem 4rem;max-width:640px}
+.hero{height:75vh;min-height:500px;max-height:780px;position:relative;overflow:hidden;display:flex;background:#0D0D0D}
+.hero-img{position:relative;width:50%;flex-shrink:0;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 12s ease-out}
+.hero-img.zoom img{transform:scale(1.04)}
+.hero-text{position:relative;z-index:2;padding:3rem 3rem 4rem;max-width:50%;display:flex;flex-direction:column;justify-content:flex-end}
 .hero-eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem;text-shadow:0 1px 4px rgba(0,0,0,.5)}
 .hero-h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:300;line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:1.2rem;text-shadow:0 2px 12px rgba(0,0,0,.4)}
 .hero-h1 em{font-style:italic;font-weight:200}
@@ -169,7 +168,9 @@ footer{background:#0D0D0D;color:#fff;padding:4rem 2.5rem 2rem}
 @media(max-width:768px){
   .nav-menu,.btn-sm{display:none}.hamburger{display:block}
   section{padding:3rem 1.2rem}
-  .hero{height:65vh;min-height:420px}.hero-text{padding:0 1.5rem 3rem}
+  .hero{height:auto;flex-direction:column;min-height:auto}
+  .hero-text{max-width:100%;padding:3rem 1.5rem;background:#0D0D0D}
+  .hero-img{width:100%;height:50vh;min-height:350px}
   .cat-layout{grid-template-columns:1fr}.cat-tall{grid-row:auto}.cat-right{grid-template-columns:1fr 1fr}.cat-block.sq-item{aspect-ratio:3/4}
   .ed-row{grid-template-columns:1fr}.ed-img{min-height:280px}.ed-copy{padding:2.5rem 1.5rem}
   .mosaic{grid-template-columns:1fr;height:auto}.mosaic-main{grid-row:auto}.mosaic-main img,.mosaic-side img{height:300px}
