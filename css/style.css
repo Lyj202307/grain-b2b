@@ -30,7 +30,7 @@ section.no-pad{padding:0}
 .sec-title{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:300;letter-spacing:-.01em;line-height:1.2}
 
 /* ── HERO BANNER ── */
-.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:flex-end;overflow:hidden}
+.hero{position:relative;height:80vh;min-height:520px;max-height:720px;display:flex;align-items:flex-end;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 30%;animation:heroSlowZoom 20s ease-out forwards}
 @keyframes heroSlowZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.25) 45%,rgba(0,0,0,.08) 100%)}
