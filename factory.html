@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Factory — SENHONG ATELIER</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.page-hero{padding:7rem 2.5rem 4rem;background:var(--dark);text-align:center}
+.page-hero .eyebrow{color:var(--gold)}
+.page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:300;color:#fff;letter-spacing:-.02em;margin-bottom:.8rem}
+.page-hero p{font-size:.9rem;color:rgba(255,255,255,.55);max-width:560px;margin:0 auto}
+
+.factory-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:3rem}
+.factory-img{aspect-ratio:4/3;background-size:cover;background-position:center;overflow:hidden;position:relative}
+.factory-img.tall{aspect-ratio:3/4;grid-row:span 2}
+.factory-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.25,.1,.25,1)}
+.factory-img:hover img{transform:scale(1.04)}
+.factory-img-label{position:absolute;bottom:1rem;left:1rem;background:rgba(13,13,13,.75);color:#fff;font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;padding:.3rem .7rem;backdrop-filter:blur(6px)}
+
+.cap-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:4rem}
+.cap-bar-item{background:#fff;padding:2rem 1.5rem;text-align:center}
+.cap-bar-item strong{display:block;font-size:1.6rem;font-weight:300;color:var(--gold);margin-bottom:.3rem}
+.cap-bar-item span{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gray)}
+
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.cert-card{border:1px solid var(--border);padding:2rem 1.5rem;text-align:center;transition:all .35s}
+.cert-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cert-icon{width:3rem;height:3rem;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--gold)}
+.cert-card h4{font-size:.82rem;font-weight:500;margin-bottom:.3rem}
+.cert-card p{font-size:.72rem;color:var(--gray)}
+
+.tour-cta{background:var(--dark);padding:4rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.tour-cta h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:300;color:#fff;margin-bottom:1rem}
+.tour-cta p{font-size:.85rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:2rem}
+
+@media(max-width:768px){
+  .factory-grid{grid-template-columns:1fr}.factory-img.tall{aspect-ratio:4/3;grid-row:auto}
+  .cap-bar{grid-template-columns:repeat(2,1fr)}.cert-grid{grid-template-columns:repeat(2,1fr)}
+  .tour-cta{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="logo">SENHONG<span> ATELIER</span></a>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="factory.html" class="active">Factory</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right"><a href="contact.html" class="btn-sm solid">Get a Quote</a></div>
+  <button class="hamburger" id="hbg">&#9776;</button>
+</nav>
+<div class="mobile-overlay" id="mob">
+  <button class="mobile-close" id="mobClose">&#10005;</button>
+  <a href="index.html" onclick="closeMob()">Home</a><a href="products.html" onclick="closeMob()">Products</a>
+  <a href="services.html" onclick="closeMob()">Services</a><a href="factory.html" onclick="closeMob()">Factory</a>
+  <a href="about.html" onclick="closeMob()">About</a><a href="contact.html" onclick="closeMob()">Contact</a>
+</div>
+
+<div class="page-hero">
+  <span class="eyebrow">Factory Tour</span>
+  <h1>Visit Our Manufacturing Facility</h1>
+  <p>We welcome brand partners for on-site factory visits. See our production lines, quality control, and craftsmanship first-hand.</p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="sec-head rv"><span class="eyebrow">Our Facility</span><h2 class="sec-title">Production at Scale</h2></div>
+
+    <div class="factory-grid rv">
+      <div class="factory-img tall"><img src="https://content.gapinc.com/d/l6cws75x62mls8s63l2750nvps270e03.jpg" alt="Production Floor" loading="lazy"><div class="factory-img-label">Production Floor</div></div>
+      <div class="factory-img"><img src="https://content.gapinc.com/d/e486hjeb63833q1121eir1h3dam6o81x.jpg" alt="Fabric Inspection" loading="lazy"><div class="factory-img-label">Fabric Inspection</div></div>
+      <div class="factory-img"><img src="https://content.gapinc.com/d/sje5q51hs5qm7k15g5br3cm6g22m3xs5.jpg" alt="Quality Control" loading="lazy"><div class="factory-img-label">Quality Control</div></div>
+    </div>
+
+    <div class="cap-bar rv">
+      <div class="cap-bar-item"><strong>20,000 m²</strong><span>Factory Area</span></div>
+      <div class="cap-bar-item"><strong>300K+</strong><span>Monthly Output</span></div>
+      <div class="cap-bar-item"><strong>250+</strong><span>Staff Members</span></div>
+      <div class="cap-bar-item"><strong>16 Years</strong><span>In Operation</span></div>
+    </div>
+
+    <div class="sec-head rv"><span class="eyebrow">Our Production Lines</span><h2 class="sec-title">In-House Capabilities</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:4rem">
+      <div class="rv d1" style="padding:2rem;border:1px solid var(--border)">
+        <h4 style="font-size:.85rem;font-weight:500;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem">
+          <span style="color:var(--gold)">&#9678;</span> Cutting &amp; Sewing
+        </h4>
+        <p style="font-size:.78rem;color:var(--gray);line-height:1.7">200+ industrial sewing machines. Specialized lines for knitwear, woven, and outerwear. Automated cutting systems for precision and consistency.</p>
+      </div>
+      <div class="rv d2" style="padding:2rem;border:1px solid var(--border)">
+        <h4 style="font-size:.85rem;font-weight:500;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem">
+          <span style="color:var(--gold)">&#9678;</span> Printing &amp; Embroidery
+        </h4>
+        <p style="font-size:.78rem;color:var(--gray);line-height:1.7">DTG digital printing, screen printing, heat transfer, embroidery — all executed in-house on dedicated machines with consistent color registration.</p>
+      </div>
+      <div class="rv d3" style="padding:2rem;border:1px solid var(--border)">
+        <h4 style="font-size:.85rem;font-weight:500;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem">
+          <span style="color:var(--gold)">&#9678;</span> Washing &amp; Finishing
+        </h4>
+        <p style="font-size:.78rem;color:var(--gray);line-height:1.7">Acid wash, garment dye, vintage wash, enzyme wash, distressing. Each batch tested for colorfastness and shrinkage per AATCC standards.</p>
+      </div>
+    </div>
+
+    <div class="sec-head rv"><span class="eyebrow">Compliance &amp; Quality</span><h2 class="sec-title">Certifications We Hold</h2></div>
+    <div class="cert-grid">
+      <div class="cert-card rv d1">
+        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>ISO 9001:2015</h4><p>Quality Management System — audited annually by SGS</p>
+      </div>
+      <div class="cert-card rv d2">
+        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
+        <h4>OEKO-TEX® Standard 100</h4><p>Tested for harmful substances — all fabric inputs certified</p>
+      </div>
+      <div class="cert-card rv d3">
+        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h4>BSCI Audit</h4><p>Business Social Compliance Initiative — ethical labour practices verified</p>
+      </div>
+      <div class="cert-card rv d4">
+        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4-8-10V5l8-3 8 3v7c0 6-8 10-8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <h4>GOTS Organic</h4><p>Global Organic Textile Standard — for certified organic cotton lines</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tour-cta">
+  <div class="rv">
+    <span class="eyebrow" style="color:var(--gold)">Book a Visit</span>
+    <h2>We Welcome Factory Visits</h2>
+    <p>Transparency is at the core of how we work. We invite brand partners to visit our Guangzhou facility, meet our team, and see our production process first-hand — at any stage of your sourcing journey.</p>
+    <a href="contact.html" class="btn-gold">Schedule a Factory Visit</a>
+  </div>
+  <div class="rv" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:2.5rem">
+    <h4 style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.5);margin-bottom:1.5rem">What to Expect on Your Visit</h4>
+    <div style="display:flex;flex-direction:column;gap:1rem">
+      <div style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--gold);font-size:.85rem;margin-top:.1rem">01</span><div><strong style="display:block;font-size:.8rem;color:#fff;font-weight:400;margin-bottom:.2rem">Production Line Walkthrough</strong><span style="font-size:.72rem;color:rgba(255,255,255,.4)">See cutting, sewing, printing, and finishing in action</span></div></div>
+      <div style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--gold);font-size:.85rem;margin-top:.1rem">02</span><div><strong style="display:block;font-size:.8rem;color:#fff;font-weight:400;margin-bottom:.2rem">QC &amp; Lab Testing Demo</strong><span style="font-size:.72rem;color:rgba(255,255,255,.4)">Colorfastness, shrinkage, and AQL inspection demonstration</span></div></div>
+      <div style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--gold);font-size:.85rem;margin-top:.1rem">03</span><div><strong style="display:block;font-size:.8rem;color:#fff;font-weight:400;margin-bottom:.2rem">Fabric &amp; Sample Room</strong><span style="font-size:.72rem;color:rgba(255,255,255,.4)">Browse 200+ fabric swatches and reference samples</span></div></div>
+      <div style="display:flex;gap:1rem;align-items:flex-start"><span style="color:var(--gold);font-size:.85rem;margin-top:.1rem">04</span><div><strong style="display:block;font-size:.8rem;color:#fff;font-weight:400;margin-bottom:.2rem">Business Discussion</strong><span style="font-size:.72rem;color:rgba(255,255,255,.4)">MOQ, pricing, timelines, and first collection planning</span></div></div>
+    </div>
+  </div>
+</div>
+
+<footer style="background:#0D0D0D;color:#fff;padding:3rem 2.5rem 2rem">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem">
+    <div><h3 style="font-size:1rem;font-weight:700;letter-spacing:.1em;margin-bottom:.8rem">SENHONG<span style="color:var(--gold)"> ATELIER</span></h3><p style="font-size:.72rem;color:#777;line-height:1.7">Premium OEM/ODM apparel manufacturer. Guangzhou, China.</p></div>
+    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Products</h4><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Woven Tops</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Knitwear</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Outerwear</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Bottoms</a></div>
+    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Company</h4><a href="about.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">About</a><a href="services.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Services</a><a href="factory.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Factory</a><a href="contact.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Contact</a></div>
+    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Certifications</h4><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">ISO 9001:2015</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">OEKO-TEX 100</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">BSCI Audit</a></div>
+  </div>
+  <div style="max-width:1280px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid #222;display:flex;justify-content:space-between"><span style="font-size:.62rem;color:#555">&copy; 2026 Senhong Atelier. All rights reserved.</span><span style="font-size:.62rem;color:#555">ISO 9001 &middot; OEKO-TEX Standard 100</span></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -2,95 +2,209 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Products — ATELIER</title>
+<meta name="description" content="SENHONG ATELIER product catalog — Woven Tops, Knitwear, Outerwear, Bottoms, Dresses & Sets. OEM/ODM MOQ 50 pcs.">
+<title>Products — SENHONG ATELIER</title>
 <link rel="stylesheet" href="css/style.css">
+<style>
+.page-hero{padding:7rem 2.5rem 4rem;background:var(--dark);text-align:center}
+.page-hero .eyebrow{color:var(--gold)}
+.page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:300;color:#fff;letter-spacing:-.02em;margin-bottom:.8rem}
+.page-hero p{font-size:.9rem;color:rgba(255,255,255,.55);max-width:520px;margin:0 auto}
+
+/* Category tabs */
+.cat-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);overflow-x:auto;margin-bottom:3rem}
+.cat-tab{padding:.75rem 1.5rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gray);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:all .25s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.cat-tab.active,.cat-tab:hover{color:var(--text);border-bottom-color:var(--gold)}
+
+/* Product grid */
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.prod-card{text-decoration:none;color:inherit;display:block}
+.prod-img-wrap{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--sand)}
+.prod-img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.25,.1,.25,1)}
+.prod-card:hover .prod-img{transform:scale(1.05)}
+.prod-badge{position:absolute;top:.8rem;left:.8rem;background:var(--gold);color:var(--dark);padding:.2rem .65rem;font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;z-index:2;font-weight:500}
+.prod-info{padding:.9rem 0 .5rem}
+.prod-info h4{font-size:.88rem;font-weight:400;margin-bottom:.2rem}
+.prod-cat{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gray)}
+.prod-detail{font-size:.62rem;color:var(--gray);margin-top:.3rem}
+.prod-moq{display:inline-block;margin-top:.5rem;font-size:.6rem;border:1px solid var(--border);padding:.2rem .6rem;color:var(--gray);letter-spacing:.06em}
+.prod-section{margin-bottom:4rem}
+.prod-section-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);margin-bottom:1.5rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+@media(max-width:1024px){.prod-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.prod-grid{grid-template-columns:repeat(2,1fr);gap:.8rem}}
+</style>
 </head>
 <body>
-
-<div class="announce"><span>&#9678; &nbsp;SS26 Samples Ready &nbsp;·&nbsp; MOQ 50 pcs/Color &nbsp;·&nbsp; ISO 9001 & OEKO-TEX Certified &nbsp;·&nbsp; 100+ Export Countries &nbsp;&#9678;</span></div>
-
 <nav class="nav">
-  <a href="index.html" class="logo">ATELIER</a>
+  <a href="index.html" class="logo">SENHONG<span> ATELIER</span></a>
   <ul class="nav-menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="products.html" class="active">Products</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="factory.html">Factory</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <a href="contact.html" class="btn-sm ghost">Swatch Book</a>
-    <a href="contact.html" class="btn-sm solid">Inquire</a>
+    <a href="contact.html" class="btn-sm solid">Get a Quote</a>
   </div>
   <button class="hamburger" id="hbg">&#9776;</button>
 </nav>
 <div class="mobile-overlay" id="mob">
   <button class="mobile-close" id="mobClose">&#10005;</button>
-  <a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="index.html" onclick="closeMob()">Home</a>
+  <a href="products.html" onclick="closeMob()">Products</a>
+  <a href="services.html" onclick="closeMob()">Services</a>
+  <a href="factory.html" onclick="closeMob()">Factory</a>
+  <a href="about.html" onclick="closeMob()">About</a>
+  <a href="contact.html" onclick="closeMob()">Contact</a>
 </div>
 
-<section class="page-hero"><div class="ph-content rv">
-  <span class="ph-tag">Our Collection</span>
-  <h1 class="ph-title">Modern Apparel</h1>
-  <p class="ph-sub">Custom OEM/ODM manufacturing. Premium fabrics, flexible MOQ, end-to-end quality control.</p>
-</div></section>
+<div class="page-hero">
+  <span class="eyebrow">Product Catalog</span>
+  <h1>Modern Apparel Collection</h1>
+  <p>Premium OEM &amp; ODM manufacturing across all core apparel categories. Sampling in 7–10 days. MOQ from 50 pcs/color.</p>
+</div>
 
-<!-- TOPS -->
 <section>
   <div class="container">
-    <div class="sec-head rv"><span class="eyebrow">Category</span><h2 class="sec-title">Tops &amp; Shirts</h2></div>
-    <div class="prod-grid">
-      <a href="contact.html" class="prod-card rv d1"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/619/666/cn61619666.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Resort Linen Shirt</h4><span class="prod-cat">Casual Shirts</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-      <a href="contact.html" class="prod-card rv d2"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0062/398/119/cn62398119.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Classic Button-Down</h4><span class="prod-cat">Casual Shirts</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-      <a href="contact.html" class="prod-card rv d3"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/595/991/cn61595991.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Heritage Crew-Neck</h4><span class="prod-cat">T-Shirts</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-      <a href="contact.html" class="prod-card rv d4"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0062/630/966/cn62630966.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Textured Stripe Resort Shirt</h4><span class="prod-cat">Casual Shirts</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-      <a href="contact.html" class="prod-card rv d5"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/717/575/cn61717575.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Mesh Polo Top</h4><span class="prod-cat">Polos</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-      <a href="contact.html" class="prod-card rv d6"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/958/128/cn61958128.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Long-Sleeve Essential</h4><span class="prod-cat">Tops</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
+
+    <!-- WOVEN TOPS -->
+    <div class="prod-section rv">
+      <div class="prod-section-title">Woven Tops &amp; Shirts</div>
+      <div class="prod-grid">
+        <a href="contact.html" class="prod-card rv d1">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/619/666/cn61619666.jpg" alt="" loading="lazy"><span class="prod-badge">New</span></div>
+          <div class="prod-info"><h4>Resort Linen Shirt</h4><span class="prod-cat">Casual Shirts</span><div class="prod-detail">100% Linen · Relaxed Fit</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d2">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0062/398/119/cn62398119.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Classic Button-Down</h4><span class="prod-cat">Casual Shirts</span><div class="prod-detail">Cotton · Regular Fit</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d3">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/595/991/cn61595991.jpg" alt="" loading="lazy"><span class="prod-badge">Best Seller</span></div>
+          <div class="prod-info"><h4>Heritage Crew-Neck Tee</h4><span class="prod-cat">T-Shirts</span><div class="prod-detail">220gsm Cotton · Unisex</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d4">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/717/575/cn61717575.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Polo Shirt</h4><span class="prod-cat">Polo</span><div class="prod-detail">Piqué Cotton · Slim / Regular</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+      </div>
     </div>
+
+    <!-- KNITWEAR -->
+    <div class="prod-section rv">
+      <div class="prod-section-title">Knitwear &amp; Sweaters</div>
+      <div class="prod-grid">
+        <a href="contact.html" class="prod-card rv d1">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/786/584/cn61786584.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Slub Knit Sweater</h4><span class="prod-cat">Sweaters</span><div class="prod-detail">Cotton-Linen Blend · Fine Gauge</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d2">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/958/025/cn61958025.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Fine-Gauge Crew</h4><span class="prod-cat">Sweaters</span><div class="prod-detail">Merino Blend · Slim Fit</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d3">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/958/128/cn61958128.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Oversized Cardigan</h4><span class="prod-cat">Knitwear</span><div class="prod-detail">Chunky Knit · Relaxed</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d4">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0062/630/966/cn62630966.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Textured Knit Top</h4><span class="prod-cat">Knitwear</span><div class="prod-detail">Viscose Blend · Fitted</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- OUTERWEAR -->
+    <div class="prod-section rv">
+      <div class="prod-section-title">Outerwear &amp; Jackets</div>
+      <div class="prod-grid">
+        <a href="contact.html" class="prod-card rv d1">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://content.gapinc.com/d/l6cws75x62mls8s63l2750nvps270e03.jpg" alt="" loading="lazy"><span class="prod-badge">Featured</span></div>
+          <div class="prod-info"><h4>Linen Blazer</h4><span class="prod-cat">Jackets</span><div class="prod-detail">100% Linen · Structured</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d2">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/369/761/cn61369761.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Bomber Jacket</h4><span class="prod-cat">Outerwear</span><div class="prod-detail">Nylon Shell · Rib Trim</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d3">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/348/777/cn61348777.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Classic Trench</h4><span class="prod-cat">Outerwear</span><div class="prod-detail">Cotton-Poly · Belted</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d4">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://content.gapinc.com/d/e486hjeb63833q1121eir1h3dam6o81x.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Padded Vest</h4><span class="prod-cat">Outerwear</span><div class="prod-detail">Recycled Fill · Zip Front</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- BOTTOMS -->
+    <div class="prod-section rv">
+      <div class="prod-section-title">Bottoms — Pants, Denim &amp; Shorts</div>
+      <div class="prod-grid">
+        <a href="contact.html" class="prod-card rv d1">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/463/308/cn61463308.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Relaxed Chino</h4><span class="prod-cat">Pants</span><div class="prod-detail">Stretch Cotton · Tapered</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d2">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/649/914/cn61649914.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Cargo Short</h4><span class="prod-cat">Shorts</span><div class="prod-detail">Nylon · Multi-Pocket</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d3">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/830/715/cn61830715.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Linen Pull-On</h4><span class="prod-cat">Pants</span><div class="prod-detail">100% Linen · Elastic Waist</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d4">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://content.gapinc.com/d/cpx81uxqxb82vkki0svrpb6cvv302ri4.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Wide-Leg Trouser</h4><span class="prod-cat">Pants</span><div class="prod-detail">Crepe · Pleated Front</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- DRESSES & SETS -->
+    <div class="prod-section rv">
+      <div class="prod-section-title">Dresses &amp; Co-ord Sets</div>
+      <div class="prod-grid">
+        <a href="contact.html" class="prod-card rv d1">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://content.gapinc.com/d/t2hkkg3486t04auh87fgjd7weyi6n8l6.jpg" alt="" loading="lazy"><span class="prod-badge">New</span></div>
+          <div class="prod-info"><h4>Linen Midi Dress</h4><span class="prod-cat">Dresses</span><div class="prod-detail">100% Linen · V-Neck</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d2">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://content.gapinc.com/d/sje5q51hs5qm7k15g5br3cm6g22m3xs5.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Linen Co-ord Set</h4><span class="prod-cat">Sets</span><div class="prod-detail">Shirt + Trouser · Matching</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d3">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://content.gapinc.com/d/v05830shn201sixwjc1w5wks4eh13q18.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Knit Dress</h4><span class="prod-cat">Dresses</span><div class="prod-detail">Viscose Knit · Bodycon</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+        <a href="contact.html" class="prod-card rv d4">
+          <div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/958/128/cn61958128.jpg" alt="" loading="lazy"></div>
+          <div class="prod-info"><h4>Blazer Set</h4><span class="prod-cat">Sets</span><div class="prod-detail">Tailored · Jacket + Pant</div><span class="prod-moq">MOQ 50 pcs</span></div>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- KNITWEAR -->
-<section style="background:var(--cream)">
-  <div class="container">
-    <div class="sec-head rv"><span class="eyebrow">Category</span><h2 class="sec-title">Knitwear &amp; Sweaters</h2></div>
-    <div class="prod-grid">
-      <a href="contact.html" class="prod-card rv d1"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/786/584/cn61786584.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Cotton-Linen Slub Sweater</h4><span class="prod-cat">Knitwear</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-      <a href="contact.html" class="prod-card rv d2"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/958/025/cn61958025.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Fine-Gauge Crew</h4><span class="prod-cat">Sweaters</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-      <a href="contact.html" class="prod-card rv d3"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/830/715/cn61830715.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Lightweight Cardigan</h4><span class="prod-cat">Knitwear</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-    </div>
-  </div>
-</section>
-
-<!-- BOTTOMS -->
-<section>
-  <div class="container">
-    <div class="sec-head rv"><span class="eyebrow">Category</span><h2 class="sec-title">Pants &amp; Denim</h2></div>
-    <div class="prod-grid">
-      <a href="contact.html" class="prod-card rv d1"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/463/308/cn61463308.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Relaxed Chino</h4><span class="prod-cat">Pants</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-      <a href="contact.html" class="prod-card rv d2"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/649/914/cn61649914.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Cargo Short</h4><span class="prod-cat">Shorts</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-      <a href="contact.html" class="prod-card rv d3"><div class="prod-img-wrap"><img class="prod-img" src="https://bananarepublic.gap.com/webcontent/0061/348/777/cn61348777.jpg" alt="" loading="lazy"></div><div class="prod-info"><h4>Wide-Leg Trouser</h4><span class="prod-cat">Pants</span><span class="prod-moq">MOQ 50 pcs</span></div></a>
-    </div>
-  </div>
-</section>
-
-<section style="background:var(--cream);text-align:center">
-  <div class="container"><div class="rv">
-    <span class="eyebrow">Don't See What You Need?</span>
-    <h2 class="sec-title" style="margin-bottom:1.5rem">We Customize<br>Any Silhouette</h2>
-    <a href="contact.html" class="btn-dark">Send Your Design Brief</a>
+<!-- CTA -->
+<section style="background:var(--dark);text-align:center;padding:4rem 2.5rem">
+  <div class="container" style="max-width:560px"><div class="rv">
+    <span class="eyebrow">Need Something Custom?</span>
+    <h2 class="sec-title" style="color:#fff;margin-bottom:1.5rem">Send Us Your Design Brief</h2>
+    <a href="contact.html" class="btn-gold">Request a Quote</a>
   </div></div>
 </section>
 
-<footer>
-  <div class="ft-grid">
-    <div class="ft-brand"><h3>ATELIER</h3><p>Premium OEM/ODM apparel manufacturer. Guangzhou, China. ISO 9001 &amp; OEKO-TEX certified.</p></div>
-    <div class="ft-col"><h4>Products</h4><a href="products.html">Tops &amp; Shirts</a><a href="products.html">Knitwear</a><a href="products.html">Outerwear</a><a href="products.html">Pants &amp; Denim</a></div>
-    <div class="ft-col"><h4>Company</h4><a href="about.html">About</a><a href="about.html">Capabilities</a><a href="about.html">Process</a><a href="contact.html">Contact</a></div>
-    <div class="ft-col"><h4>Certifications</h4><a href="#">ISO 9001:2015</a><a href="#">OEKO-TEX 100</a><a href="#">BSCI Audit</a><a href="#">GOTS Organic</a></div>
+<footer style="background:#0D0D0D;color:#fff;padding:3rem 2.5rem 2rem">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem">
+    <div><h3 style="font-size:1rem;font-weight:700;letter-spacing:.1em;margin-bottom:.8rem">SENHONG<span style="color:var(--gold)"> ATELIER</span></h3><p style="font-size:.72rem;color:#777;line-height:1.7">Premium OEM/ODM apparel manufacturer. Guangzhou, China. ISO 9001 &amp; OEKO-TEX certified.</p></div>
+    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Products</h4><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Woven Tops</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Knitwear</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Outerwear</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Bottoms</a></div>
+    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Company</h4><a href="about.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">About</a><a href="services.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Services</a><a href="factory.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Factory</a><a href="contact.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Contact</a></div>
+    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Certifications</h4><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">ISO 9001:2015</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">OEKO-TEX 100</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">BSCI Audit</a></div>
   </div>
-  <div class="ft-bot"><span>&copy; 2026 Atelier. All rights reserved.</span><span>ISO 9001 &middot; OEKO-TEX Standard 100</span></div>
+  <div style="max-width:1280px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid #222;display:flex;justify-content:space-between"><span style="font-size:.62rem;color:#555">&copy; 2026 Senhong Atelier. All rights reserved.</span><span style="font-size:.62rem;color:#555">ISO 9001 &middot; OEKO-TEX Standard 100</span></div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
