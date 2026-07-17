@@ -2,82 +2,216 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Contact — ATELIER</title>
+<meta name="description" content="Contact SENHONG ATELIER — Start your OEM/ODM apparel project. Request a quote, schedule a factory visit, or download our catalogue.">
+<title>Contact — SENHONG ATELIER</title>
 <link rel="stylesheet" href="css/style.css">
+<style>
+.page-hero{padding:7rem 2.5rem 4rem;background:var(--dark);text-align:center}
+.page-hero .eyebrow{color:var(--gold)}
+.page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:300;color:#fff;letter-spacing:-.02em;margin-bottom:.8rem}
+.page-hero p{font-size:.9rem;color:rgba(255,255,255,.55);max-width:520px;margin:0 auto}
+
+.contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+
+.contact-info h3{font-size:1.3rem;font-weight:300;letter-spacing:-.01em;margin-bottom:.8rem}
+.contact-info p{font-size:.85rem;color:var(--gray);line-height:1.8;margin-bottom:2rem}
+
+.contact-block{margin-bottom:2rem}
+.contact-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.contact-item:first-child{border-top:1px solid var(--border)}
+.ci-icon{width:2.2rem;height:2.2rem;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0}
+.ci-icon svg{display:block}
+.ci-label{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gray);display:block;margin-bottom:.2rem}
+.ci-val{font-size:.85rem;color:var(--text);font-weight:400}
+.ci-note{font-size:.7rem;color:var(--gray);display:block;margin-top:.15rem}
+
+.alt-ctas{display:flex;flex-direction:column;gap:.8rem}
+.alt-cta{display:flex;align-items:center;gap:1rem;padding:1.2rem;border:1px solid var(--border);text-decoration:none;color:var(--text);transition:all .3s}
+.alt-cta:hover{border-color:var(--gold);transform:translateX(4px)}
+.alt-cta svg{color:var(--gold);flex-shrink:0}
+.alt-cta div strong{display:block;font-size:.82rem;font-weight:400;margin-bottom:.15rem}
+.alt-cta div span{font-size:.72rem;color:var(--gray)}
+
+/* Form */
+.form-box{background:var(--cream);padding:3rem}
+.form-title{font-size:1.1rem;font-weight:300;margin-bottom:.5rem}
+.form-sub{font-size:.8rem;color:var(--gray);margin-bottom:2rem}
+.fg{margin-bottom:1rem}
+.fg label{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.13em;color:var(--gray);margin-bottom:.35rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:.72rem .9rem;border:1px solid var(--border);background:#fff;font-size:.82rem;font-family:inherit;color:var(--text);transition:border-color .25s;-webkit-appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--gold)}
+.fg textarea{min-height:130px;resize:vertical}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.btn-submit{width:100%;background:var(--gold);color:var(--dark);border:none;padding:.9rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;cursor:pointer;transition:background .25s;font-weight:500;font-family:inherit}
+.btn-submit:hover{background:var(--gold-light)}
+.form-note{font-size:.65rem;color:var(--gray);margin-top:.8rem;text-align:center}
+
+@media(max-width:768px){
+  .contact-layout{grid-template-columns:1fr;gap:2.5rem}
+  .fg-row{grid-template-columns:1fr}
+  .form-box{padding:2rem 1.5rem}
+}
+</style>
 </head>
 <body>
 
-<div class="announce"><span>&#9678; &nbsp;SS26 Samples Ready &nbsp;·&nbsp; MOQ 50 pcs/Color &nbsp;·&nbsp; ISO 9001 & OEKO-TEX Certified &nbsp;·&nbsp; 100+ Export Countries &nbsp;&#9678;</span></div>
-
 <nav class="nav">
-  <a href="index.html" class="logo">ATELIER</a>
+  <a href="index.html" class="logo">SENHONG<span> ATELIER</span></a>
   <ul class="nav-menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="products.html">Products</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="factory.html">Factory</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
-  <div class="nav-right">
-    <a href="contact.html" class="btn-sm ghost">Swatch Book</a>
-    <a href="contact.html" class="btn-sm solid">Inquire</a>
-  </div>
+  <div class="nav-right"><a href="contact.html" class="btn-sm solid">Get a Quote</a></div>
   <button class="hamburger" id="hbg">&#9776;</button>
 </nav>
 <div class="mobile-overlay" id="mob">
   <button class="mobile-close" id="mobClose">&#10005;</button>
-  <a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="index.html" onclick="closeMob()">Home</a>
+  <a href="products.html" onclick="closeMob()">Products</a>
+  <a href="services.html" onclick="closeMob()">Services</a>
+  <a href="factory.html" onclick="closeMob()">Factory</a>
+  <a href="about.html" onclick="closeMob()">About</a>
+  <a href="contact.html" onclick="closeMob()">Contact</a>
 </div>
 
-<section class="page-hero">
-  <div class="ph-content rv"><span class="ph-tag">Get in Touch</span><h1 class="ph-title">Start Your Project</h1><p class="ph-sub">Tell us what you need. We respond within 24 hours.</p></div>
-</section>
+<div class="page-hero">
+  <span class="eyebrow">Get in Touch</span>
+  <h1>Start Your Project</h1>
+  <p>Fill in the form or reach us directly. We respond to all inquiries within 24 hours, Monday to Friday.</p>
+</div>
 
 <section>
-  <div class="container"><div class="inq-grid">
-    <div class="rvl">
-      <h2 style="font-size:1.5rem;font-weight:300;margin-bottom:1rem">Let's Talk About<br>Your Collection</h2>
-      <p style="font-size:.85rem;color:var(--gray);line-height:1.8;margin-bottom:2rem">Whether you're an established brand scaling production or launching your first drop — fill out the form or reach us directly. We respond within 24 hours.</p>
-      <div class="contact-block">
-        <div class="contact-item"><span class="lbl">Email</span><span class="val">hello@atelier-mfg.com</span></div>
-        <div class="contact-item"><span class="lbl">WhatsApp</span><span class="val">+86 138 0000 0000</span></div>
-        <div class="contact-item"><span class="lbl">Showroom</span><span class="val">Guangzhou, Guangdong, China<br><small style="color:var(--gray)">By appointment only</small></span></div>
-        <div class="contact-item"><span class="lbl">Hours</span><span class="val">Mon–Fri 09:00–18:00 (GMT+8)<br><small style="color:var(--gray)">Weekend inquiries replied Monday</small></span></div>
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- LEFT: INFO -->
+      <div class="rvl">
+        <h3>Let's Build Your Collection</h3>
+        <p>Whether you're a startup launching your first line or an established brand scaling production — we're ready to help. Tell us about your project and we'll come back with a tailored proposal.</p>
+
+        <div class="contact-block">
+          <div class="contact-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div><span class="ci-label">Email</span><span class="ci-val">hello@senhong-apparel.com</span><span class="ci-note">For general inquiries &amp; quote requests</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div><span class="ci-label">WhatsApp / WeChat</span><span class="ci-val">+86 138 0000 0000</span><span class="ci-note">Business hours: Mon–Fri 09:00–18:00 (GMT+8)</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div><span class="ci-label">Showroom &amp; Factory</span><span class="ci-val">Guangzhou, Guangdong, China</span><span class="ci-note">Factory visits welcome — by appointment only</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div><span class="ci-label">Response Time</span><span class="ci-val">Within 24 hours</span><span class="ci-note">Mon–Fri · Weekend inquiries replied Monday</span></div>
+          </div>
+        </div>
+
+        <div class="alt-ctas">
+          <a href="factory.html" class="alt-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-7 8 7v10"/><path d="M9 20v-6h6v6"/></svg>
+            <div><strong>Schedule a Factory Visit</strong><span>Tour our production facility in Guangzhou</span></div>
+          </a>
+          <a href="services.html" class="alt-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div><strong>View Our Services</strong><span>OEM / ODM / Private Label / Catalogue</span></div>
+          </a>
+          <a href="products.html" class="alt-cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <div><strong>Browse Product Catalog</strong><span>Tops · Knitwear · Outerwear · Bottoms · Sets</span></div>
+          </a>
+        </div>
       </div>
+
+      <!-- RIGHT: FORM -->
+      <form class="form-box rvr" onsubmit="submitForm(event)">
+        <h4 class="form-title">Request a Quote</h4>
+        <p class="form-sub">Complete the form below and we'll get back to you within 24 hours with a detailed proposal.</p>
+
+        <div class="fg-row">
+          <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your name" required></div>
+          <div class="fg"><label>Company / Brand</label><input type="text" placeholder="Brand or company name"></div>
+        </div>
+        <div class="fg-row">
+          <div class="fg"><label>Email Address *</label><input type="email" placeholder="you@company.com" required></div>
+          <div class="fg"><label>WhatsApp / Phone</label><input type="tel" placeholder="+1 234 567 8900"></div>
+        </div>
+        <div class="fg"><label>Country</label>
+          <select>
+            <option value="">Select your country</option>
+            <option>United States</option><option>United Kingdom</option><option>France</option>
+            <option>Germany</option><option>Australia</option><option>Canada</option>
+            <option>Italy</option><option>Spain</option><option>Japan</option>
+            <option>South Korea</option><option>Other</option>
+          </select>
+        </div>
+        <div class="fg"><label>Product Category</label>
+          <select>
+            <option value="">Select a category</option>
+            <option>Woven Tops &amp; Shirts</option>
+            <option>Knitwear &amp; Sweaters</option>
+            <option>Outerwear &amp; Jackets</option>
+            <option>Pants, Denim &amp; Shorts</option>
+            <option>Dresses &amp; Co-ord Sets</option>
+            <option>Multiple Categories</option>
+          </select>
+        </div>
+        <div class="fg"><label>Estimated Order Quantity</label>
+          <select>
+            <option value="">Select quantity range</option>
+            <option>50–200 pcs (test / small batch)</option>
+            <option>200–1,000 pcs</option>
+            <option>1,000–5,000 pcs</option>
+            <option>5,000–20,000 pcs</option>
+            <option>20,000+ pcs</option>
+          </select>
+        </div>
+        <div class="fg"><label>Service Required</label>
+          <select>
+            <option value="">Select service type</option>
+            <option>OEM — I have my own designs / tech packs</option>
+            <option>ODM — I need design development support</option>
+            <option>Private Label — branding &amp; packaging only</option>
+            <option>Factory Visit — I'd like to visit first</option>
+            <option>Not sure yet — I need a consultation</option>
+          </select>
+        </div>
+        <div class="fg"><label>Project Details *</label>
+          <textarea placeholder="Tell us about your designs, fabrics, target timeline, and any specific requirements. The more detail you share, the faster and more accurate our proposal will be." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Inquiry →</button>
+        <p class="form-note">By submitting this form you agree to be contacted regarding your inquiry. We never share your information with third parties.</p>
+      </form>
+
     </div>
-    <form class="form-box rvr" onsubmit="submitForm(event)">
-      <div class="fg-row">
-        <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your name" required></div>
-        <div class="fg"><label>Company / Brand</label><input type="text" placeholder="Brand name"></div>
-      </div>
-      <div class="fg-row">
-        <div class="fg"><label>Email Address *</label><input type="email" placeholder="you@company.com" required></div>
-        <div class="fg"><label>WhatsApp / Phone</label><input type="tel" placeholder="+1 234 567 8900"></div>
-      </div>
-      <div class="fg"><label>Product Category</label>
-        <select><option value="">Select a category</option><option>Tops &amp; Shirts</option><option>Knitwear &amp; Sweaters</option><option>Outerwear &amp; Jackets</option><option>Pants &amp; Denim</option><option>Dresses &amp; Sets</option><option>Multiple Categories</option></select>
-      </div>
-      <div class="fg"><label>Estimated Order Quantity</label>
-        <select><option value="">Select quantity range</option><option>50–200 pcs (small batch / test)</option><option>200–1,000 pcs</option><option>1,000–5,000 pcs</option><option>5,000–20,000 pcs</option><option>20,000+ pcs</option></select>
-      </div>
-      <div class="fg"><label>Where did you hear about us?</label>
-        <select><option value="">Select source</option><option>Google Search</option><option>Trade Show / Exhibition</option><option>Referral</option><option>Social Media</option><option>Alibaba / B2B Platform</option><option>Other</option></select>
-      </div>
-      <div class="fg"><label>Project Details *</label><textarea placeholder="Describe your designs, fabrics, timeline, and requirements. The more detail, the faster we can help." required></textarea></div>
-      <button type="submit" class="btn-submit">Send Inquiry</button>
-    </form>
-  </div></div>
+  </div>
 </section>
 
-<footer>
-  <div class="ft-grid">
-    <div class="ft-brand"><h3>ATELIER</h3><p>Premium OEM/ODM apparel manufacturer. Guangzhou, China. ISO 9001 &amp; OEKO-TEX certified.</p></div>
-    <div class="ft-col"><h4>Products</h4><a href="products.html">Tops &amp; Shirts</a><a href="products.html">Knitwear</a><a href="products.html">Outerwear</a><a href="products.html">Pants &amp; Denim</a></div>
-    <div class="ft-col"><h4>Company</h4><a href="about.html">About</a><a href="about.html">Capabilities</a><a href="about.html">Process</a><a href="contact.html">Contact</a></div>
-    <div class="ft-col"><h4>Certifications</h4><a href="#">ISO 9001:2015</a><a href="#">OEKO-TEX 100</a><a href="#">BSCI Audit</a><a href="#">GOTS Organic</a></div>
+<footer style="background:#0D0D0D;color:#fff;padding:3rem 2.5rem 2rem">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2rem">
+    <div><h3 style="font-size:1rem;font-weight:700;letter-spacing:.1em;margin-bottom:.8rem">SENHONG<span style="color:#C5A059"> ATELIER</span></h3><p style="font-size:.72rem;color:#777;line-height:1.7;max-width:260px">Premium OEM/ODM apparel manufacturer. Guangzhou, China. ISO 9001 &amp; OEKO-TEX certified. Since 2010.</p></div>
+    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Products</h4><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Woven Tops</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Knitwear</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Outerwear</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Bottoms &amp; Sets</a></div>
+    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Company</h4><a href="about.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">About Us</a><a href="services.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Services</a><a href="factory.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Factory Tour</a><a href="contact.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Contact</a></div>
+    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Certifications</h4><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">ISO 9001:2015</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">OEKO-TEX 100</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">BSCI Audit</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">GOTS Organic</a></div>
   </div>
-  <div class="ft-bot"><span>&copy; 2026 Atelier. All rights reserved.</span><span>ISO 9001 &middot; OEKO-TEX Standard 100</span></div>
+  <div style="max-width:1280px;margin:0 auto;padding-top:1.5rem;border-top:1px solid #222;display:flex;justify-content:space-between">
+    <span style="font-size:.62rem;color:#555">&copy; 2026 Senhong Atelier. All rights reserved.</span>
+    <span style="font-size:.62rem;color:#555">ISO 9001 &middot; OEKO-TEX Standard 100</span>
+  </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
