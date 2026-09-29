@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Product — SENHONG ATELIER</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+#pdp{padding:3rem 2.5rem}
+.pdp-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:start}
+.pdp-main{background:var(--sand);aspect-ratio:3/4;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pdp-main img{width:100%;height:100%;object-fit:contain}
+.pdp-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin-top:.7rem}
+.pdp-thumb{padding:0;border:1px solid rgba(0,0,0,.08);background:var(--sand);cursor:pointer;aspect-ratio:3/4;overflow:hidden}
+.pdp-thumb img{width:100%;height:100%;object-fit:cover}
+.pdp-thumb.is-active{border-color:var(--gold)}
+.pdp-info h1{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:300;letter-spacing:-.01em;margin:.4rem 0 .8rem}
+.pdp-lede{color:var(--gray);font-size:.9rem;line-height:1.8;margin-bottom:1.6rem}
+.pdp-specs{list-style:none;padding:0;margin:0 0 1.8rem}
+.pdp-specs li{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px solid rgba(0,0,0,.07);font-size:.82rem}
+.pdp-specs li span{color:var(--gray)}
+.pdp-specs li strong{font-weight:400}
+.pdp-h3{font-size:.95rem;font-weight:500;margin:1.6rem 0 .7rem}
+.pdp-features{list-style:none;padding:0;margin:0 0 1.8rem;display:grid;grid-template-columns:1fr 1fr;gap:.45rem .9rem;font-size:.8rem;color:var(--gray)}
+.pdp-features li:before{content:"— ";color:var(--gold)}
+.pdp-cta{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:1rem}
+.pdp-note{font-size:.72rem;color:var(--gray);line-height:1.7}
+.pdp-missing{padding:4rem 2.5rem;text-align:center}
+@media(max-width:860px){#pdp{padding:2rem 1.25rem}.pdp-wrap{grid-template-columns:1fr;gap:2rem}.pdp-features{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="logo">SENHONG<span> ATELIER</span></a>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html" class="active">Products</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="factory.html">Factory</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="contact.html" class="btn-sm ghost">Swatch Book</a>
+    <a href="contact.html" class="btn-sm solid">Inquire</a>
+  </div>
+  <button class="hamburger" id="hbg">&#9776;</button>
+</nav>
+<div class="mobile-overlay" id="mob">
+  <button class="mobile-close" id="mobClose">&#10005;</button>
+  <a href="index.html" onclick="closeMob()">Home</a>
+  <a href="products.html" onclick="closeMob()">Products</a>
+  <a href="services.html" onclick="closeMob()">Services</a>
+  <a href="factory.html" onclick="closeMob()">Factory</a>
+  <a href="about.html" onclick="closeMob()">About</a>
+  <a href="contact.html" onclick="closeMob()">Contact</a>
+</div>
+
+<section id="pdp" class="container">
+  <noscript><p style="padding:3rem 0">This page needs JavaScript enabled to display the product detail.</p></noscript>
+</section>
+
+<footer>
+  <div class="ft-grid">
+    <div class="ft-brand"><h3>SENHONG<span> ATELIER</span></h3><p>Premium OEM/ODM streetwear manufacturer. Humen, Dongguan, China. ISO 9001 &amp; OEKO-TEX certified. Supplying global brands since 2010.</p></div>
+    <div class="ft-col"><h4>Products</h4><a href="products.html">Heavyweight Tees</a><a href="products.html">Oversized Tees</a><a href="products.html">Hoodie &amp; Jogger Sets</a><a href="products.html">Fabric &amp; Craft Detail</a></div>
+    <div class="ft-col"><h4>Company</h4><a href="about.html">About Us</a><a href="about.html">Capabilities</a><a href="about.html">Process</a><a href="contact.html">Contact</a></div>
+    <div class="ft-col"><h4>Certifications</h4><a href="#">ISO 9001:2015</a><a href="#">OEKO-TEX 100</a><a href="#">BSCI Audit</a><a href="#">GOTS Organic</a></div>
+  </div>
+  <div class="ft-bot"><span>&copy; 2026 SENHONG ATELIER. All rights reserved.</span><span>ISO 9001 &middot; OEKO-TEX Standard 100</span></div>
+</footer>
+
+<script src="data/site-data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/site-render.js"></script>
+</body>
+</html>
