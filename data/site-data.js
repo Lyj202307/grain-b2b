@@ -45,7 +45,7 @@ window.SITE_DATA = {
 
   /* 产品页分组（顺序 = 页面上的 5 个分组） */
   groups: [
-    { id: 'tees', title: 'Heavyweight T-Shirts', items: ['tee-01', 'tee-02', 'tee-03', 'tee-04'] },
+    { id: 'tees', title: 'Heavyweight T-Shirts', items: ['tee-01', 'tee-02', 'tee-03', 'tee-04', 'tee-09', 'tee-10'] },
     { id: 'oversized', title: 'Oversized Street Tees', items: ['tee-05', 'tee-06', 'tee-07', 'tee-08'] },
     { id: 'sets', title: 'Hoodie & Jogger Sets', items: ['hoodie-01', 'hoodie-02', 'hoodie-03', 'hoodie-04'] },
     { id: 'onmodel', title: 'Hoodie Sets — On Model', items: ['hoodie-05', 'hoodie-06', 'hoodie-07', 'hoodie-08'] },
@@ -131,6 +131,22 @@ window.SITE_DATA = {
       imageAlts: ['Model shot', 'Garment on fabric', 'Fabric & stitch detail', 'Colour range', 'Size chart']
     },
 
+    'tee-09': {
+      name: 'Angel Graphic Tee (Black)', category: 'Heavyweight Tees', group: 'tees',
+      moq: 50, badge: 'New',
+      detail: 'Front graphic print · boxy short sleeve',
+      image: 'images/tee-09.webp',
+      gallery: ['images/tee-09.webp'],
+      imageAlts: ['On model']
+    },
+    'tee-10': {
+      name: 'Brick-Face Print Tee (White)', category: 'Heavyweight Tees', group: 'tees',
+      moq: 50,
+      detail: 'Oversized fit · rubberised print',
+      image: 'images/tee-10.webp',
+      gallery: ['images/tee-10.webp'],
+      imageAlts: ['On model']
+    },
     'hoodie-01': {
       name: 'Hoodie & Jogger Set (Pink)', category: 'Sets', group: 'sets',
       moq: 50, badge: 'Featured',
