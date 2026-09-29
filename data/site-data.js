@@ -3,6 +3,20 @@
    改这里 = 全站生效（品牌名 / 地址 / 电话 / 产品 / 导航文案）
    ============================================================ */
 window.SITE_DATA = {
+  /* 站点地址（canonical / og:url / sitemap 用） */
+  siteUrl: 'https://senhongatelier.com',
+
+  /* 每个页面的 SEO 描述与社交分享图（改这里即可） */
+  meta: {
+    'index.html': { description: 'Custom heavyweight T-shirt and hoodie manufacturer in Humen, Dongguan, China. 50 pcs MOQ, 240-320 GSM tees, 380-500 GSM fleece sets, print, embroidery and wash programmes in-house.', image: 'images/og-share.webp' },
+    'products.html': { description: 'Heavyweight tees, oversized street tees and hoodie & jogger sets — real factory samples, MOQ from 50 pcs per colour. OEM/ODM production in Humen, Dongguan.', image: 'images/og-share.webp' },
+    'product.html': { description: 'Product detail — fabric weight, MOQ, customisation options and factory imagery for our heavyweight streetwear programme.', image: 'images/og-share.webp' },
+    'services.html': { description: 'OEM and ODM services: design support, low MOQ sampling, fabric sourcing, printing, embroidery, washing and door-to-door export shipping.', image: 'images/og-share.webp' },
+    'factory.html': { description: 'Inside our Humen, Dongguan factory — cutting, sewing, inspection, packing and export loading, with ISO 9001 and OEKO-TEX certified processes.', image: 'images/site-hero.webp' },
+    'about.html': { description: 'Senhong Atelier is a heavyweight streetwear manufacturer in Humen, Dongguan, China — 250+ staff, 300K monthly capacity, ISO 9001 and OEKO-TEX certified since 2010.', image: 'images/about-model.webp' },
+    'contact.html': { description: 'Contact Senhong Atelier — phone +86 138 0000 0000, showroom and factory in Humen, Dongguan, Guangdong, China. Quotes answered within 24 hours.', image: 'images/og-share.webp' }
+  },
+
   brand: {
     first: 'SENHONG',
     accent: ' ATELIER',
@@ -61,6 +75,80 @@ window.SITE_DATA = {
     'factory.html': 'Our Factory — SENHONG ATELIER',
     'about.html': 'About Us — SENHONG ATELIER',
     'contact.html': 'Contact — SENHONG ATELIER'
+  },
+
+  /* ============ About 页内容 ============ */
+  about: {
+    hero: {
+      eyebrow: 'Our Story',
+      title: 'Built on Craft.<br>Driven by Quality.',
+      lede: 'Since 2010, Senhong Atelier has partnered with global brands to deliver precision-manufactured streetwear from Humen, Dongguan, China.'
+    },
+    who: {
+      eyebrow: 'Who We Are',
+      title: 'From Humen, Dongguan<br>to the World',
+      image: 'images/about-model.webp',
+      imageAlt: 'Model wearing a washed heavyweight graphic tee from our sample collection',
+      paragraphs: [
+        'Senhong Atelier started as a 20-person workshop with one belief: apparel manufacturing should combine artisan quality with industrial efficiency. Today we are a fully integrated 250+ person operation serving 500+ brands across 100+ countries.',
+        'We do not just produce garments — we partner with brands to translate creative vision into commercially successful collections, from 50-piece test runs to 50,000-piece bulk orders.'
+      ],
+      cta: { label: 'Start a Project', href: 'contact.html' }
+    },
+    stats: [
+      { value: 16, label: 'Years in Operation' },
+      { value: 250, label: 'Production Staff' },
+      { value: 500, label: 'Brand Partners' },
+      { value: 100, label: 'Export Countries' }
+    ],
+    values: {
+      eyebrow: 'Our Values',
+      title: 'What Drives Us',
+      items: [
+        { icon: 'shield', name: 'Quality First', text: 'Every garment passes multi-stage QC. We never cut corners on quality to hit a faster delivery — because your brand reputation depends on it.' },
+        { icon: 'eye', name: 'Radical Transparency', text: 'No hidden markups. No surprise delays. We communicate proactively at every stage — from sampling to final packing — so you are never in the dark.' },
+        { icon: 'leaf', name: 'Responsibility', text: 'OEKO-TEX certified fabrics, GOTS organic options and zero-waste cutting programmes. Sustainability is built into our process, not bolted on.' }
+      ]
+    },
+    capabilities: {
+      eyebrow: 'Manufacturing Capabilities',
+      title: 'Full-Spectrum OEM & ODM',
+      items: [
+        { num: '50+', name: 'Minimum Order Quantity', text: '50–100 pcs per colour for test production. Scale to 50K+ with zero quality drop-off.' },
+        { num: '200+', name: 'Certified Fabric Options', text: 'OEKO-TEX cotton, recycled polyester, heavyweight fleece and GOTS organic — fully certified.' },
+        { num: '10+', name: 'Finishing Techniques', text: 'DTG and screen printing, embroidery, acid wash, garment dye and vintage distressing — all in-house.' },
+        { num: '7–10', name: 'Days to Proto Sample', text: 'First prototype delivered in 7–10 working days. Revision rounds until approved.' },
+        { num: '300K', name: 'Monthly Production Capacity', text: 'Across heavyweight tees and hoodie sets — consistent output at scale.' },
+        { num: '100+', name: 'Export Countries', text: 'FOB / CIF / DDP. Door-to-door logistics with full documentation and customs support.' }
+      ]
+    },
+    process: {
+      eyebrow: 'How We Work',
+      title: 'From Sketch to Shipment',
+      items: [
+        { num: '01', name: 'Inquiry & Brief', text: 'Share your concept, references or tech pack. We respond within 24 hours.' },
+        { num: '02', name: 'Design & Sampling', text: 'Proto sample in 7–10 days. Iterate until every detail is right.' },
+        { num: '03', name: 'Fabric & Trims', text: '200+ certified mills. Sustainable options at no extra lead time.' },
+        { num: '04', name: 'Bulk Production', text: 'ISO 9001. Inline QC at cutting, sewing, finishing and packing.' },
+        { num: '05', name: 'Global Shipment', text: 'Custom packaging, final audit, FOB / CIF / DDP worldwide.' }
+      ]
+    },
+    certifications: {
+      eyebrow: 'Compliance & Quality',
+      title: 'Certifications We Hold',
+      items: [
+        { name: 'ISO 9001:2015', text: 'Quality Management System — audited annually' },
+        { name: 'OEKO-TEX® 100', text: 'Tested for harmful substances — all fabric inputs' },
+        { name: 'BSCI Audit', text: 'Ethical labour practices — independently verified' },
+        { name: 'GOTS Organic', text: 'Global Organic Textile Standard — certified cotton lines' }
+      ]
+    },
+    cta: {
+      eyebrow: "Let's Work Together",
+      title: 'Ready to Start Your Project?',
+      primary: { label: 'Request a Quote', href: 'contact.html' },
+      secondary: { label: 'Visit Our Factory', href: 'factory.html' }
+    }
   },
 
   /* ============ 产品 ============ */

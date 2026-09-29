@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://senhongatelier.com/sitemap.xml

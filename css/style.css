@@ -169,3 +169,16 @@ footer{background:var(--dark);color:#fff;padding:4rem 2.5rem 2rem}
   .stats-full .container{grid-template-columns:repeat(2,1fr)}
   .ft-grid{grid-template-columns:1fr 1fr;gap:2rem}
 }
+
+/* ── MOBILE POLISH & SAFETY ── */
+.logo{white-space:nowrap}
+img,svg{max-width:100%}
+@media(max-width:768px){
+  .container{padding-left:1.2rem;padding-right:1.2rem}
+  .ft-brand p{max-width:none}
+  .ft-grid{gap:1.6rem}
+  p,h1,h2,h3,h4,li,a{overflow-wrap:break-word}
+}
+@media(max-width:480px){
+  .ft-grid{grid-template-columns:1fr}
+}

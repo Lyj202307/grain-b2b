@@ -15,6 +15,11 @@
   };
   var brandHTML = esc(D.brand.first) + '<span> ' + esc(D.brand.accent.trim()) + '</span>';
 
+  function currentFile() {
+    var f = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    return f || 'index.html';
+  }
+
   /* ---------- 1. 品牌 / 页脚 / 联系方式 ---------- */
   function applyBrand() {
     $$('.logo').forEach(function (el) { el.innerHTML = brandHTML; });
@@ -76,8 +81,7 @@
     }
 
     /* 动态写入标题 */
-    var file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    var t = D.titles[file];
+    var t = D.titles[currentFile()];
     if (t) document.title = t;
   }
 
@@ -198,12 +202,176 @@
     });
   }
 
+  /* ---------- 5. About 页：数据驱动刷新 ---------- */
+  function countUp(root) {
+    if (!root) return;
+    var nodes = $$('[data-count]', root);
+    if (!nodes.length) return;
+    var done = function (el) { el.textContent = (parseInt(el.getAttribute('data-count'), 10) || 0).toLocaleString(); };
+    if (!('IntersectionObserver' in window)) { nodes.forEach(done); return; }
+    var run = function (el) {
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0, t0 = null;
+      var step = function (ts) {
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / 1100, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString();
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.35 });
+    /* Do NOT zero the numbers up-front: crawlers / no-scroll renders must keep the real value */
+    nodes.forEach(function (n) { io.observe(n); });
+  }
+
+  function applyAbout() {
+    var A = D.about;
+    if (!A || !document.querySelector('.ab-hero')) return;
+    var setText = function (k, v) { $$('[data-ab="' + k + '"]').forEach(function (el) { el.textContent = v; }); };
+    var setHtml = function (k, v) { $$('[data-ab-html="' + k + '"]').forEach(function (el) { el.innerHTML = v; }); };
+
+    setText('hero.eyebrow', A.hero.eyebrow);
+    setHtml('hero.title', A.hero.title);
+    setText('hero.lede', A.hero.lede);
+
+    setText('who.eyebrow', A.who.eyebrow);
+    setHtml('who.title', A.who.title);
+    var paras = $('[data-ab-paras]');
+    if (paras) paras.innerHTML = A.who.paragraphs.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
+    var whoImg = document.getElementById('abImage');
+    if (whoImg) { whoImg.setAttribute('src', A.who.image); whoImg.setAttribute('alt', A.who.imageAlt || ''); }
+    var whoCta = $('[data-ab-cta]');
+    if (whoCta) { whoCta.textContent = A.who.cta.label; whoCta.setAttribute('href', A.who.cta.href); }
+
+    var stats = $('[data-ab-stats]');
+    if (stats) {
+      stats.innerHTML = A.stats.map(function (s) {
+        return '<div class="ab-stat"><b data-count="' + s.value + '">' + s.value + '</b><span>' + esc(s.label) + '</span></div>';
+      }).join('');
+      countUp(stats);
+    }
+
+    setText('values.eyebrow', A.values.eyebrow);
+    setText('values.title', A.values.title);
+    var icons = {
+      shield: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+      eye: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+      leaf: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V8M5 12l7-4 7 4M12 8V2"/></svg>'
+    };
+    var vals = $('[data-ab-values]');
+    if (vals) vals.innerHTML = A.values.items.map(function (it) {
+      return '<div class="ab-card"><div class="ic">' + (icons[it.icon] || '') + '</div><h4>' + esc(it.name) + '</h4><p>' + esc(it.text) + '</p></div>';
+    }).join('');
+
+    setText('capabilities.eyebrow', A.capabilities.eyebrow);
+    setText('capabilities.title', A.capabilities.title);
+    var caps = $('[data-ab-caps]');
+    if (caps) caps.innerHTML = A.capabilities.items.map(function (it) {
+      return '<div class="ab-card"><span class="ab-num">' + esc(it.num) + '</span><h4>' + esc(it.name) + '</h4><p>' + esc(it.text) + '</p></div>';
+    }).join('');
+
+    setText('process.eyebrow', A.process.eyebrow);
+    setText('process.title', A.process.title);
+    var proc = $('[data-ab-process]');
+    if (proc) proc.innerHTML = A.process.items.map(function (it) {
+      return '<div class="ab-step"><span class="n">' + esc(it.num) + '</span><h4>' + esc(it.name) + '</h4><p>' + esc(it.text) + '</p></div>';
+    }).join('');
+
+    setText('certifications.eyebrow', A.certifications.eyebrow);
+    setText('certifications.title', A.certifications.title);
+    var tick = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>';
+    var certs = $('[data-ab-certs]');
+    if (certs) certs.innerHTML = A.certifications.items.map(function (it) {
+      return '<div class="ab-cert"><span class="tick">' + tick + '</span><div><h4>' + esc(it.name) + '</h4><p>' + esc(it.text) + '</p></div></div>';
+    }).join('');
+
+    setText('cta.eyebrow', A.cta.eyebrow);
+    setText('cta.title', A.cta.title);
+    var c1 = $('[data-ab-cta1]'), c2 = $('[data-ab-cta2]');
+    if (c1) { c1.textContent = A.cta.primary.label; c1.setAttribute('href', A.cta.primary.href); }
+    if (c2) { c2.textContent = A.cta.secondary.label; c2.setAttribute('href', A.cta.secondary.href); }
+  }
+
+  /* ---------- 6. SEO：meta / canonical / og / JSON-LD ---------- */
+  function setMeta(attr, key, val) {
+    if (!val) return;
+    var el = document.head.querySelector('meta[' + attr + '="' + key + '"]');
+    if (!el) { el = document.createElement('meta'); el.setAttribute(attr, key); document.head.appendChild(el); }
+    el.setAttribute('content', val);
+  }
+
+  function applySeo() {
+    var file = currentFile();
+    var m = (D.meta && D.meta[file]) || {};
+    var url = D.siteUrl + '/' + (file === 'index.html' ? '' : file);
+    var img = D.siteUrl + '/' + (m.image || 'images/og-share.webp');
+
+    setMeta('name', 'description', m.description);
+    var can = document.head.querySelector('link[rel="canonical"]');
+    if (!can) { can = document.createElement('link'); can.setAttribute('rel', 'canonical'); document.head.appendChild(can); }
+    can.setAttribute('href', url);
+    setMeta('property', 'og:type', 'website');
+    setMeta('property', 'og:site_name', D.brand.full);
+    setMeta('property', 'og:title', document.title);
+    setMeta('property', 'og:description', m.description);
+    setMeta('property', 'og:image', img);
+    setMeta('property', 'og:url', url);
+    setMeta('name', 'twitter:card', 'summary_large_image');
+    setMeta('name', 'twitter:title', document.title);
+    setMeta('name', 'twitter:description', m.description);
+    setMeta('name', 'twitter:image', img);
+
+    var blocks = [{
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: D.brand.full,
+      url: D.siteUrl + '/',
+      logo: D.siteUrl + '/images/apple-touch-icon.png',
+      telephone: D.contact.phone,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: D.address.city,
+        addressRegion: 'Guangdong',
+        addressCountry: 'CN'
+      }
+    }];
+
+    if (file === 'product.html') {
+      var id = (location.search.match(/[?&]id=([^&]+)/) || [])[1];
+      var p = id && D.products[decodeURIComponent(id)];
+      if (p) {
+        blocks.push({
+          '@context': 'https://schema.org', '@type': 'Product',
+          name: p.name, image: [D.siteUrl + '/' + p.image], description: p.detail,
+          category: p.category, brand: { '@type': 'Brand', name: D.brand.full }
+        });
+        blocks.push({
+          '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: D.siteUrl + '/' },
+            { '@type': 'ListItem', position: 2, name: 'Products', item: D.siteUrl + '/products.html' },
+            { '@type': 'ListItem', position: 3, name: p.name, item: url }
+          ]
+        });
+      }
+    }
+
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify(blocks);
+    document.head.appendChild(s);
+  }
+
   function boot() {
     applyBrand();
     applyHome();
     applyProducts();
     applyProduct();
+    applyAbout();
     applyForm();
+    applySeo();
   }
 
   if (document.readyState === 'loading') {

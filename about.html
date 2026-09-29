@@ -2,54 +2,87 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="About SENHONG ATELIER — Premium OEM/ODM apparel manufacturer in Humen, Dongguan since 2010. ISO 9001, OEKO-TEX, BSCI certified.">
 <title>About Us — SENHONG ATELIER</title>
+<meta name="description" content="Senhong Atelier is a heavyweight streetwear manufacturer in Humen, Dongguan, China — 250+ staff, 300K monthly capacity, ISO 9001 and OEKO-TEX certified since 2010.">
+<link rel="canonical" href="https://senhongatelier.com/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SENHONG ATELIER">
+<meta property="og:title" content="About Us — SENHONG ATELIER">
+<meta property="og:description" content="A heavyweight streetwear manufacturer in Humen, Dongguan, China. ISO 9001 and OEKO-TEX certified since 2010.">
+<meta property="og:image" content="https://senhongatelier.com/images/about-model.webp">
+<meta property="og:url" content="https://senhongatelier.com/about.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.page-hero{padding:7rem 2.5rem 4rem;background:var(--dark);text-align:center}
-.page-hero .eyebrow{color:var(--gold)}
-.page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:300;color:#fff;letter-spacing:-.02em;margin-bottom:.8rem}
-.page-hero p{font-size:.9rem;color:rgba(255,255,255,.55);max-width:560px;margin:0 auto}
+/* ---------- About page ---------- */
+.ab-hero{background:var(--dark);color:#fff;text-align:center;padding:8rem 2.5rem 5rem}
+.ab-hero .rule{width:44px;height:1px;background:var(--gold);margin:0 auto 1.6rem}
+.ab-hero .eyebrow{color:var(--gold);margin-bottom:1.1rem;display:block}
+.ab-hero h1{font-size:clamp(2rem,4.2vw,3.1rem);font-weight:300;letter-spacing:-.02em;line-height:1.18;margin-bottom:1.1rem}
+.ab-hero p{font-size:.92rem;color:rgba(255,255,255,.6);max-width:620px;margin:0 auto;line-height:1.9}
 
-.about-split{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:520px}
-.about-img{background-size:cover;background-position:center;min-height:420px}
-.about-text{display:flex;flex-direction:column;justify-content:center;padding:4rem 3.5rem}
-.about-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:300;letter-spacing:-.01em;line-height:1.2;margin-bottom:1.2rem}
-.about-text p{font-size:.88rem;color:var(--gray);line-height:1.8;margin-bottom:1rem}
+.ab-split{display:grid;grid-template-columns:1fr 1.05fr;align-items:stretch}
+.ab-media{position:relative;overflow:hidden;background:var(--sand);min-height:520px}
+.ab-media img{width:100%;height:100%;object-fit:cover;object-position:center 28%;display:block}
+.ab-copy{padding:5rem 4.5rem;display:flex;flex-direction:column;justify-content:center;max-width:720px}
+.ab-copy h2{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:300;letter-spacing:-.015em;line-height:1.3;margin:.5rem 0 1.4rem}
+.ab-copy p{font-size:.88rem;line-height:2;color:var(--gray);margin-bottom:1.1rem;max-width:52ch}
+.ab-copy .btn-gold{margin-top:.9rem;align-self:flex-start}
 
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.value-card{padding:2rem 1.8rem;border:1px solid var(--border);transition:all .35s}
-.value-card:hover{border-color:var(--gold);transform:translateY(-4px)}
-.value-num{font-size:2rem;font-weight:200;color:var(--gold);margin-bottom:.6rem}
-.value-card h4{font-size:.88rem;font-weight:500;margin-bottom:.5rem}
-.value-card p{font-size:.78rem;color:var(--gray);line-height:1.65}
+.ab-stats{background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3.2rem 2.5rem}
+.ab-stats-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.ab-stat{text-align:center;padding:.4rem 1rem;border-left:1px solid var(--border)}
+.ab-stat:first-child{border-left:0}
+.ab-stat b{display:block;font-size:2.15rem;font-weight:300;letter-spacing:-.02em;line-height:1.1}
+.ab-stat span{display:block;font-size:.59rem;text-transform:uppercase;letter-spacing:.15em;color:var(--gray);margin-top:.55rem}
 
-.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
-.cap-item{background:#fff;padding:2.2rem 1.8rem;text-align:center;transition:background .3s}
-.cap-item:hover{background:var(--cream)}
-.cap-num{font-size:1.6rem;font-weight:200;letter-spacing:-.02em;margin-bottom:.4rem;color:var(--gold)}
-.cap-item h4{font-size:.82rem;font-weight:500;margin-bottom:.4rem;letter-spacing:.03em}
-.cap-item p{font-size:.75rem;color:var(--gray);line-height:1.65}
+.ab-sec{padding:5rem 2.5rem}
+.ab-sec--cream{background:var(--cream)}
+.ab-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.ab-grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.ab-grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:1.4rem}
+.ab-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem}
 
-.process-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
-.proc-item{text-align:center;padding:2rem .8rem;transition:transform .3s}
-.proc-item:hover{transform:translateY(-3px)}
-.proc-num{font-size:1.5rem;font-weight:200;color:var(--border);margin-bottom:.6rem;transition:color .3s}
-.proc-item:hover .proc-num{color:var(--gold)}
-.proc-item h4{font-size:.8rem;font-weight:500;margin-bottom:.3rem}
-.proc-item p{font-size:.7rem;color:var(--gray);line-height:1.5}
+.ab-card{background:#fff;border:1px solid var(--border);padding:2rem 1.7rem;height:100%;display:flex;flex-direction:column}
+.ab-card .ic{width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:1.1rem}
+.ab-card h4{font-size:.86rem;font-weight:500;letter-spacing:.01em;margin-bottom:.6rem}
+.ab-card p{font-size:.79rem;line-height:1.85;color:var(--gray);margin:0}
+.ab-num{font-size:1.5rem;font-weight:300;color:var(--gold);letter-spacing:-.01em;margin-bottom:.7rem;display:block}
+.ab-step{border-top:1px solid var(--border);padding-top:1.3rem}
+.ab-step .n{font-size:.68rem;letter-spacing:.18em;color:var(--gold);display:block;margin-bottom:.7rem}
+.ab-step h4{font-size:.83rem;font-weight:500;margin-bottom:.5rem}
+.ab-step p{font-size:.77rem;line-height:1.8;color:var(--gray);margin:0}
+.ab-cert{display:flex;gap:.9rem;align-items:flex-start;background:#fff;border:1px solid var(--border);padding:1.5rem 1.4rem;height:100%}
+.ab-cert .tick{color:var(--gold);flex-shrink:0;margin-top:.15rem}
+.ab-cert h4{font-size:.8rem;font-weight:500;margin-bottom:.35rem}
+.ab-cert p{font-size:.74rem;color:var(--gray);line-height:1.7;margin:0}
+.ab-cta{background:var(--dark);color:#fff;text-align:center;padding:4.5rem 2.5rem}
+.ab-cta .eyebrow{color:var(--gold);display:block;margin-bottom:.9rem}
+.ab-cta h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:300;margin-bottom:1.8rem}
+.ab-cta .row{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.ab-cta .ghost{border:1px solid rgba(255,255,255,.25);color:#fff;padding:.8rem 1.9rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.13em;text-decoration:none}
+.ab-cta .ghost:hover{border-color:var(--gold);color:var(--gold)}
 
-.cert-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.cert-card{border:1px solid var(--border);padding:2rem 1.5rem;text-align:center;transition:all .35s}
-.cert-card:hover{border-color:var(--gold);transform:translateY(-3px)}
-.cert-icon{width:2.8rem;height:2.8rem;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;margin:0 auto .8rem;color:var(--gold)}
-.cert-card h4{font-size:.82rem;font-weight:500;margin-bottom:.3rem}
-.cert-card p{font-size:.72rem;color:var(--gray)}
-
-@media(max-width:768px){
-  .about-split{grid-template-columns:1fr}.about-img{min-height:280px}.about-text{padding:2.5rem 1.5rem}
-  .values-grid{grid-template-columns:1fr}.cap-grid{grid-template-columns:1fr}
-  .process-row{grid-template-columns:1fr 1fr}.cert-row{grid-template-columns:1fr 1fr}
+@media(max-width:1000px){
+  .ab-split{grid-template-columns:1fr}
+  .ab-media{min-height:380px}
+  .ab-copy{padding:3.2rem 1.6rem;max-width:none}
+  .ab-grid6,.ab-grid3{grid-template-columns:1fr 1fr}
+  .ab-grid5{grid-template-columns:1fr 1fr 1fr}
+  .ab-grid4{grid-template-columns:1fr 1fr}
+  .ab-sec{padding:3.6rem 1.4rem}
+  .ab-hero{padding:6.5rem 1.4rem 3.6rem}
+}
+@media(max-width:640px){
+  .ab-grid6,.ab-grid3,.ab-grid5,.ab-grid4{grid-template-columns:1fr}
+  .ab-stats{padding:2.4rem 1rem}
+  .ab-stats-in{grid-template-columns:1fr 1fr;row-gap:1.8rem}
+  .ab-stat{border-left:0}
+  .ab-stat:nth-child(2n){border-left:1px solid var(--border)}
+  .ab-media{min-height:300px}
 }
 </style>
 </head>
@@ -65,7 +98,10 @@
     <li><a href="about.html" class="active">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-right"><a href="contact.html" class="btn-sm solid">Get a Quote</a></div>
+  <div class="nav-right">
+    <a href="contact.html" class="btn-sm ghost">Swatch Book</a>
+    <a href="contact.html" class="btn-sm solid">Inquire</a>
+  </div>
   <button class="hamburger" id="hbg">&#9776;</button>
 </nav>
 <div class="mobile-overlay" id="mob">
@@ -78,140 +114,112 @@
   <a href="contact.html" onclick="closeMob()">Contact</a>
 </div>
 
-<!-- PAGE HERO -->
-<div class="page-hero">
-  <span class="eyebrow">Our Story</span>
-  <h1>Built on Craft.<br>Driven by Quality.</h1>
-  <p>Since 2010, Senhong Atelier has partnered with global fashion brands to deliver precision-manufactured apparel from Humen, Dongguan, China.</p>
+<section class="ab-hero">
+  <div class="container">
+    <div class="rule"></div>
+    <span class="eyebrow" data-ab="hero.eyebrow">Our Story</span>
+    <h1 data-ab-html="hero.title">Built on Craft.<br>Driven by Quality.</h1>
+    <p data-ab="hero.lede">Since 2010, Senhong Atelier has partnered with global brands to deliver precision-manufactured streetwear from Humen, Dongguan, China.</p>
+  </div>
+</section>
+
+<section class="ab-split">
+  <div class="ab-media rvl">
+    <img id="abImage" src="images/about-model.webp" alt="Model wearing a washed heavyweight graphic tee from our sample collection">
+  </div>
+  <div class="ab-copy">
+    <span class="eyebrow" data-ab="who.eyebrow">Who We Are</span>
+    <h2 data-ab-html="who.title">From Humen, Dongguan<br>to the World</h2>
+    <div data-ab-paras>
+      <p>Senhong Atelier started as a 20-person workshop with one belief: apparel manufacturing should combine artisan quality with industrial efficiency. Today we are a fully integrated 250+ person operation serving 500+ brands across 100+ countries.</p>
+      <p>We do not just produce garments — we partner with brands to translate creative vision into commercially successful collections, from 50-piece test runs to 50,000-piece bulk orders.</p>
+    </div>
+    <a class="btn-gold" href="contact.html" data-ab-cta>Start a Project</a>
+  </div>
+</section>
+
+<div class="ab-stats">
+  <div class="ab-stats-in" data-ab-stats>
+    <div class="ab-stat"><b data-count="16">16</b><span>Years in Operation</span></div>
+    <div class="ab-stat"><b data-count="250">250</b><span>Production Staff</span></div>
+    <div class="ab-stat"><b data-count="500">500</b><span>Brand Partners</span></div>
+    <div class="ab-stat"><b data-count="100">100</b><span>Export Countries</span></div>
+  </div>
 </div>
 
-<!-- STORY SPLIT -->
-<section style="padding:0">
-  <div class="about-split">
-    <div class="about-img rvl" style="background-image:url(images/site-cutting.webp)"></div>
-    <div class="about-text rvr">
-      <span class="eyebrow">Who We Are</span>
-      <h2>From Humen, Dongguan<br>to the World</h2>
-      <p>Senhong Atelier started as a 20-person workshop with one belief: apparel manufacturing should combine artisan quality with industrial efficiency. Today, we are a fully integrated 250+ person operation serving 500+ fashion brands across 100+ countries.</p>
-      <p>We don't just produce garments — we partner with brands to translate creative vision into commercially successful collections, from 50-piece test runs to 50,000-piece bulk orders.</p>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats-full" style="background:var(--cream);padding:3rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-  <div class="container" id="statsBar" style="display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:1rem">
-    <div class="rv"><div class="stat-n" data-t="16" style="font-size:2rem;font-weight:300;letter-spacing:-.02em">0</div><div class="stat-l" style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gray);margin-top:.3rem">Years in Operation</div></div>
-    <div class="rv d1"><div class="stat-n" data-t="250" style="font-size:2rem;font-weight:300;letter-spacing:-.02em">0</div><div class="stat-l" style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gray);margin-top:.3rem">Production Staff</div></div>
-    <div class="rv d2"><div class="stat-n" data-t="500" style="font-size:2rem;font-weight:300;letter-spacing:-.02em">0</div><div class="stat-l" style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gray);margin-top:.3rem">Brand Partners</div></div>
-    <div class="rv d3"><div class="stat-n" data-t="100" style="font-size:2rem;font-weight:300;letter-spacing:-.02em">0</div><div class="stat-l" style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gray);margin-top:.3rem">Export Countries</div></div>
-  </div>
-</div>
-
-<!-- VALUES -->
-<section>
+<section class="ab-sec">
   <div class="container">
-    <div class="sec-head rv"><span class="eyebrow">Our Values</span><h2 class="sec-title">What Drives Us</h2></div>
-    <div class="values-grid">
-      <div class="value-card rv d1">
-        <div class="value-num">01</div>
-        <h4>Precision Over Speed</h4>
-        <p>Every garment passes multi-stage QC. We never cut corners on quality to hit a faster delivery — because your brand reputation depends on it.</p>
-      </div>
-      <div class="value-card rv d2">
-        <div class="value-num">02</div>
-        <h4>Transparent Partnership</h4>
-        <p>No hidden markups. No surprise delays. We communicate proactively at every stage — from sampling to final packing — so you're never in the dark.</p>
-      </div>
-      <div class="value-card rv d3">
-        <div class="value-num">03</div>
-        <h4>Sustainable by Default</h4>
-        <p>OEKO-TEX certified fabrics, GOTS organic options, and zero-waste cutting programmes. Sustainability is built into our process, not bolted on.</p>
-      </div>
+    <div class="sec-head rv"><span class="eyebrow" data-ab="values.eyebrow">Our Values</span><h2 class="sec-title" data-ab="values.title">What Drives Us</h2></div>
+    <div class="ab-grid3" data-ab-values>
+      <div class="ab-card"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Quality First</h4><p>Every garment passes multi-stage QC. We never cut corners on quality to hit a faster delivery — because your brand reputation depends on it.</p></div>
+      <div class="ab-card"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h4>Radical Transparency</h4><p>No hidden markups. No surprise delays. We communicate proactively at every stage — from sampling to final packing — so you are never in the dark.</p></div>
+      <div class="ab-card"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V8M5 12l7-4 7 4M12 8V2"/></svg></div><h4>Responsibility</h4><p>OEKO-TEX certified fabrics, GOTS organic options and zero-waste cutting programmes. Sustainability is built into our process, not bolted on.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CAPABILITIES -->
-<section style="background:var(--cream)">
+<section class="ab-sec ab-sec--cream">
   <div class="container">
-    <div class="sec-head rv"><span class="eyebrow">Manufacturing Capabilities</span><h2 class="sec-title">Full-Spectrum OEM &amp; ODM</h2></div>
-    <div class="cap-grid">
-      <div class="cap-item rv d1"><div class="cap-num">50+</div><h4>Minimum Order Quantity</h4><p>50–100 pcs per color for test production. Scale to 50K+ with zero quality drop-off.</p></div>
-      <div class="cap-item rv d2"><div class="cap-num">200+</div><h4>Certified Fabric Options</h4><p>OEKO-TEX cotton, recycled polyester, heavyweight fleece, GOTS organic, linen blends — fully certified.</p></div>
-      <div class="cap-item rv d3"><div class="cap-num">10+</div><h4>Finishing Techniques</h4><p>DTG &amp; screen printing, embroidery, acid wash, garment dye, vintage distressing — all in-house.</p></div>
-      <div class="cap-item rv d4"><div class="cap-num">7–10</div><h4>Days to Proto Sample</h4><p>First prototype delivered in 7–10 working days. Revision rounds until approved.</p></div>
-      <div class="cap-item rv d5"><div class="cap-num">300K</div><h4>Monthly Production Capacity</h4><p>Across heavyweight tees and hoodie sets — consistent output at scale.</p></div>
-      <div class="cap-item rv d6"><div class="cap-num">100+</div><h4>Export Countries</h4><p>FOB / CIF / DDP. Door-to-door logistics with full documentation and customs support.</p></div>
+    <div class="sec-head rv"><span class="eyebrow" data-ab="capabilities.eyebrow">Manufacturing Capabilities</span><h2 class="sec-title" data-ab="capabilities.title">Full-Spectrum OEM &amp; ODM</h2></div>
+    <div class="ab-grid6" data-ab-caps>
+      <div class="ab-card"><span class="ab-num">50+</span><h4>Minimum Order Quantity</h4><p>50–100 pcs per colour for test production. Scale to 50K+ with zero quality drop-off.</p></div>
+      <div class="ab-card"><span class="ab-num">200+</span><h4>Certified Fabric Options</h4><p>OEKO-TEX cotton, recycled polyester, heavyweight fleece and GOTS organic — fully certified.</p></div>
+      <div class="ab-card"><span class="ab-num">10+</span><h4>Finishing Techniques</h4><p>DTG and screen printing, embroidery, acid wash, garment dye and vintage distressing — all in-house.</p></div>
+      <div class="ab-card"><span class="ab-num">7–10</span><h4>Days to Proto Sample</h4><p>First prototype delivered in 7–10 working days. Revision rounds until approved.</p></div>
+      <div class="ab-card"><span class="ab-num">300K</span><h4>Monthly Production Capacity</h4><p>Across heavyweight tees and hoodie sets — consistent output at scale.</p></div>
+      <div class="ab-card"><span class="ab-num">100+</span><h4>Export Countries</h4><p>FOB / CIF / DDP. Door-to-door logistics with full documentation and customs support.</p></div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section>
+<section class="ab-sec">
   <div class="container">
-    <div class="sec-head rv"><span class="eyebrow">How We Work</span><h2 class="sec-title">From Sketch to Shipment</h2></div>
-    <div class="process-row">
-      <div class="proc-item rv d1"><div class="proc-num">01</div><h4>Inquiry &amp; Brief</h4><p>Share your concept, references, or tech pack. We respond within 24 hours.</p></div>
-      <div class="proc-item rv d2"><div class="proc-num">02</div><h4>Design &amp; Sampling</h4><p>Proto sample in 7–10 days. Iterate until every detail is right.</p></div>
-      <div class="proc-item rv d3"><div class="proc-num">03</div><h4>Fabric &amp; Trims</h4><p>200+ certified mills. Sustainable options at no extra lead time.</p></div>
-      <div class="proc-item rv d4"><div class="proc-num">04</div><h4>Bulk Production</h4><p>ISO 9001. Inline QC at cutting, sewing, finishing, and packing.</p></div>
-      <div class="proc-item rv d5"><div class="proc-num">05</div><h4>Global Shipment</h4><p>Custom packaging, final audit, FOB/CIF/DDP worldwide.</p></div>
+    <div class="sec-head rv"><span class="eyebrow" data-ab="process.eyebrow">How We Work</span><h2 class="sec-title" data-ab="process.title">From Sketch to Shipment</h2></div>
+    <div class="ab-grid5" data-ab-process>
+      <div class="ab-step"><span class="n">01</span><h4>Inquiry &amp; Brief</h4><p>Share your concept, references or tech pack. We respond within 24 hours.</p></div>
+      <div class="ab-step"><span class="n">02</span><h4>Design &amp; Sampling</h4><p>Proto sample in 7–10 days. Iterate until every detail is right.</p></div>
+      <div class="ab-step"><span class="n">03</span><h4>Fabric &amp; Trims</h4><p>200+ certified mills. Sustainable options at no extra lead time.</p></div>
+      <div class="ab-step"><span class="n">04</span><h4>Bulk Production</h4><p>ISO 9001. Inline QC at cutting, sewing, finishing and packing.</p></div>
+      <div class="ab-step"><span class="n">05</span><h4>Global Shipment</h4><p>Custom packaging, final audit, FOB / CIF / DDP worldwide.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section style="background:var(--cream)">
+<section class="ab-sec ab-sec--cream">
   <div class="container">
-    <div class="sec-head rv"><span class="eyebrow">Compliance &amp; Quality</span><h2 class="sec-title">Certifications We Hold</h2></div>
-    <div class="cert-row">
-      <div class="cert-card rv d1">
-        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h4>ISO 9001:2015</h4><p>Quality Management System — audited annually</p>
-      </div>
-      <div class="cert-card rv d2">
-        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
-        <h4>OEKO-TEX® 100</h4><p>Tested for harmful substances — all fabric inputs</p>
-      </div>
-      <div class="cert-card rv d3">
-        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h4>BSCI Audit</h4><p>Ethical labour practices — independently verified</p>
-      </div>
-      <div class="cert-card rv d4">
-        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4-8-10V5l8-3 8 3v7c0 6-8 10-8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-        <h4>GOTS Organic</h4><p>Global Organic Textile Standard — certified cotton lines</p>
-      </div>
+    <div class="sec-head rv"><span class="eyebrow" data-ab="certifications.eyebrow">Compliance &amp; Quality</span><h2 class="sec-title" data-ab="certifications.title">Certifications We Hold</h2></div>
+    <div class="ab-grid4" data-ab-certs>
+      <div class="ab-cert"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>ISO 9001:2015</h4><p>Quality Management System — audited annually</p></div></div>
+      <div class="ab-cert"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>OEKO-TEX® 100</h4><p>Tested for harmful substances — all fabric inputs</p></div></div>
+      <div class="ab-cert"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>BSCI Audit</h4><p>Ethical labour practices — independently verified</p></div></div>
+      <div class="ab-cert"><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>GOTS Organic</h4><p>Global Organic Textile Standard — certified cotton lines</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section style="background:var(--dark);text-align:center;padding:4rem 2.5rem">
-  <div class="container" style="max-width:560px"><div class="rv">
-    <span class="eyebrow" style="color:var(--gold)">Let's Work Together</span>
-    <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:300;color:#fff;margin-bottom:1.5rem">Ready to Start Your Project?</h2>
-    <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
-      <a href="contact.html" class="btn-gold">Get in Touch</a>
-      <a href="factory.html" style="border:1px solid rgba(255,255,255,.25);color:#fff;padding:.78rem 1.9rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.13em;text-decoration:none;display:inline-block;transition:all .28s">Visit Our Factory</a>
+<section class="ab-cta">
+  <div class="container" style="max-width:600px">
+    <span class="eyebrow" data-ab="cta.eyebrow">Let's Work Together</span>
+    <h2 data-ab="cta.title">Ready to Start Your Project?</h2>
+    <div class="row">
+      <a class="btn-gold" href="contact.html" data-ab-cta1>Request a Quote</a>
+      <a class="ghost" href="factory.html" data-ab-cta2>Visit Our Factory</a>
     </div>
-  </div></div>
+  </div>
 </section>
 
-<footer style="background:#0D0D0D;color:#fff;padding:3rem 2.5rem 2rem">
-  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2rem">
-    <div><h3 style="font-size:1rem;font-weight:700;letter-spacing:.1em;margin-bottom:.8rem">SENHONG<span style="color:#C5A059"> ATELIER</span></h3><p style="font-size:.72rem;color:#777;line-height:1.7;max-width:260px">Premium OEM/ODM apparel manufacturer. Humen, Dongguan, China. ISO 9001 &amp; OEKO-TEX certified. Since 2010.</p></div>
-    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Products</h4><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0;transition:color .25s">Heavyweight Tees</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Oversized Tees</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Hoodie &amp; Jogger Sets</a><a href="products.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Fabric &amp; Craft Detail</a></div>
-    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Company</h4><a href="about.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">About Us</a><a href="services.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Services</a><a href="factory.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Factory Tour</a><a href="contact.html" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">Contact</a></div>
-    <div><h4 style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:.8rem">Certifications</h4><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">ISO 9001:2015</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">OEKO-TEX 100</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">BSCI Audit</a><a href="#" style="display:block;color:#888;text-decoration:none;font-size:.72rem;padding:.25rem 0">GOTS Organic</a></div>
+<footer>
+  <div class="ft-grid">
+    <div class="ft-brand"><h3>SENHONG<span> ATELIER</span></h3><p>Premium OEM/ODM streetwear manufacturer. Humen, Dongguan, China. ISO 9001 &amp; OEKO-TEX certified. Supplying global brands since 2010.</p></div>
+    <div class="ft-col"><h4>Products</h4><a href="products.html">Heavyweight Tees</a><a href="products.html">Oversized Tees</a><a href="products.html">Hoodie &amp; Jogger Sets</a><a href="products.html">Fabric &amp; Craft Detail</a></div>
+    <div class="ft-col"><h4>Company</h4><a href="about.html">About Us</a><a href="services.html">Services</a><a href="factory.html">Factory Tour</a><a href="contact.html">Contact</a></div>
+    <div class="ft-col"><h4>Certifications</h4><a href="#">ISO 9001:2015</a><a href="#">OEKO-TEX 100</a><a href="#">BSCI Audit</a><a href="#">GOTS Organic</a></div>
   </div>
-  <div style="max-width:1280px;margin:0 auto;padding-top:1.5rem;border-top:1px solid #222;display:flex;justify-content:space-between">
-    <span style="font-size:.62rem;color:#555">&copy; 2026 SENHONG ATELIER. All rights reserved.</span>
-    <span style="font-size:.62rem;color:#555">ISO 9001 &middot; OEKO-TEX Standard 100</span>
-  </div>
+  <div class="ft-bot"><span>&copy; 2026 SENHONG ATELIER. All rights reserved.</span><span>ISO 9001 &middot; OEKO-TEX Standard 100</span></div>
 </footer>
-<script src="js/main.js"></script>
+
 <script src="data/site-data.js"></script>
+<script src="js/main.js"></script>
 <script src="js/site-render.js"></script>
 </body>
 </html>
